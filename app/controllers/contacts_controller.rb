@@ -6,9 +6,8 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(secure_params)
-    Rails.logger.debug "DEBUG: params are #{params}"
-    Rails.logger.debug "DEBUG: what is #{secure_params}"
     if @contact.valid?
+      @contact.update_spreadsheet
       flash[:notice] = "Message sent from #{@contact.name}."
       redirect_to root_path
     else
