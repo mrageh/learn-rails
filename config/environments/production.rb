@@ -79,9 +79,9 @@ LearnRails::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   #email enabled in production
-  config.action_mailer.default_url_option = {:host => ENV["DOMAIN_NAME"]}
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options   = { :host => ENV["DOMAIN_NAME"] }
+  config.action_mailer.delivery_method       = :smtp
+  config.action_mailer.perform_deliveries    = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
