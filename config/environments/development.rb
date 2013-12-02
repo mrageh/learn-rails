@@ -13,7 +13,7 @@ LearnRails::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # Don't care if the mailer can't send.
+   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
 
   # Send email in development mode.
@@ -30,7 +30,7 @@ LearnRails::Application.configure do
   # number of complex assets.
   config.assets.debug = true
   config.action_mailer.smtp_settings = {
-    address: "smpt.gmail.com",
+    address: "smtp.gmail.com",
     port: 587,
     domain: ENV["DOMAIN_NAME"],
     authentication: "plain",
